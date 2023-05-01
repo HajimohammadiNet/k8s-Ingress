@@ -1,4 +1,4 @@
-# k8s-Ingress
+# mergeable-k8s-Ingress
 
 ## Using Mergeable Ingress in Kubernetes
 

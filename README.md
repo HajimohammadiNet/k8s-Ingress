@@ -74,6 +74,7 @@ spec:
 </pre>
 
 The nginx.org/mergeable-ingress-type: minion annotation is used to specify that this is a minion ingress. A minion will be used to append different locations to an ingress resource with the master value. TLS configurations are not allowed. Multiple minions can be applied per master as long as they do not have conflicting paths. If a conflicting path is present, then the path defined on the oldest minion will be used.
-Conclusion
+
+### Conclusion
 
 Mergeable Ingress is a great way to manage multiple Ingress resources with a common hostname and different paths. By deploying a master ingress and multiple minion ingresses, you can avoid conflicts and manage a large number of paths more efficiently.

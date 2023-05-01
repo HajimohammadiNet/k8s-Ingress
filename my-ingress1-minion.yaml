@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress1-minion
+  namespace: my-namespace
+  annotations:
+    nginx.org/mergeable-ingress-type: minion
+spec:
+  rules:
+  - host: my.host.com
+    http:
+      paths:
+      - path: /foo
+        pathType: Prefix
+        backend:
+          service:
+            name: my-service1
+            port:
+              name: http
